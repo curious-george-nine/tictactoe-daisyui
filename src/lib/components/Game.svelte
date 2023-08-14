@@ -65,7 +65,7 @@
     if (!hasWon) hasWon = board[1] == p && board[4] == p && board[7] == p;
     if (!hasWon) hasWon = board[2] == p && board[5] == p && board[8] == p;
 
-    if (!hasWon) hasWon = board[1] == p && board[4] == p && board[8] == p;
+    if (!hasWon) hasWon = board[0] == p && board[4] == p && board[8] == p;
     if (!hasWon) hasWon = board[2] == p && board[4] == p && board[6] == p;
 
     if (hasWon) return true;
@@ -93,7 +93,7 @@
 >
   {#each board as tile, i}
     <button
-      class="block bg-base-300 text-2xl aspect-square rounded-xl font-bold"
+      class="block bg-base-300 text-2xl aspect-square rounded-xl font-bold active:scale-95 transition"
       on:click={() => tileClick(i)}>{tile}</button
     >
   {/each}
